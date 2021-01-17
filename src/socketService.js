@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 let socket;
 
 export const initSocket = () => {
-	socket = io('https://kodluyoruz.rocknjs.com/', {
+	socket = io('http://localhost:3000', {
 		transports: ['websocket'],
 	});
 
