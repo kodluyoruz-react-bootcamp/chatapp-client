@@ -5,14 +5,13 @@
 	width: 100%;
 	margin: 40px auto 0 auto;
 	background-color: cornsilk;
-	display: flex;
-	flex-direction: column;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .chatlist > div {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
+	height: 400px;
 }
 
 .textInput {
