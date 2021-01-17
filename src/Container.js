@@ -23,7 +23,7 @@ function Container() {
 		});
 
 		subscribeToChat((message) => {
-			setMessages((oldChats) => [{ message }, ...oldChats]);
+			setMessages((oldChats) => [...oldChats, { message }]);
 		});
 
 		return () => disconnectSocket();
