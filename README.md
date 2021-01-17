@@ -1,4 +1,4 @@
 # Node + Socket.IO + React Chat App
 
-[Live Preview](https://chatkodluyoruz.netlify.app/).
+[💥 Live Preview](https://chatkodluyoruz.netlify.app/) 
 
