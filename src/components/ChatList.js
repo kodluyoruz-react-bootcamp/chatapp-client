@@ -5,6 +5,8 @@ import styles from './style.module.css';
 import ChatContext from '../contexts/ChatContext';
 import ChatItem from './ChatItem';
 
+import ScrollableFeed from 'react-scrollable-feed';
+
 function ChatList() {
 	const chatListRef = useRef(null);
 
@@ -16,9 +18,11 @@ function ChatList() {
 
 	return (
 		<div className={styles.chatlist} ref={chatListRef}>
-			{messages.map((item, key) => (
-				<ChatItem key={key} item={item} />
-			))}
+			<ScrollableFeed>
+				{messages.map((item, key) => (
+					<ChatItem key={key} item={item} />
+				))}
+			</ScrollableFeed>
 		</div>
 	);
 }

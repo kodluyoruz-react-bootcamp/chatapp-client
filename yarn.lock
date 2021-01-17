@@ -9071,6 +9071,11 @@ react-scripts@4.0.1:
   optionalDependencies:
     fsevents "^2.1.3"
 
+react-scrollable-feed@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-scrollable-feed/-/react-scrollable-feed-1.2.0.tgz#1ff1ef12083e19104cbdfe2b4f571bae9c87d1da"
+  integrity sha512-KSkMVmhRg8YxhxOH8rf3vyOSpJt5Adw+9f6nIysEbmumN6dI2lfWpF1mthclTqQTGpPKTjpagK5wYiJZvE18IQ==
+
 react-timeago@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-timeago/-/react-timeago-5.2.0.tgz#d655d40aa55e4fe08a92234481a6aea7f656ab5d"

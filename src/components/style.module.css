@@ -10,6 +10,11 @@
 	overflow: auto;
 }
 
+.chatlist > div {
+	display: flex;
+	flex-direction: column;
+}
+
 .textInput {
 	border: solid 1px #ddd;
 	padding: 10px;
