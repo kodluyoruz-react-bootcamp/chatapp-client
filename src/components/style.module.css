@@ -10,7 +10,7 @@
 
 .chatlist > div {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	height: 400px;
 }
 
