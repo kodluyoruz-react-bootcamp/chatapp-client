@@ -1,16 +1,16 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext } from 'react';
 
-import ChatList from "./components/ChatList";
-import ChatForm from "./components/ChatForm";
+import ChatList from './components/ChatList';
+import ChatForm from './components/ChatForm';
 
-import ChatContext from "./contexts/ChatContext";
+import ChatContext from './contexts/ChatContext';
 
 import {
 	initSocket,
 	disconnectSocket,
 	subscribeToChat,
 	subscribeInitialMessages,
-} from "./socketService";
+} from './socketService';
 
 function Container() {
 	const { setMessages } = useContext(ChatContext);
@@ -23,7 +23,7 @@ function Container() {
 		});
 
 		subscribeToChat((message) => {
-			setMessages((oldChats) => [...oldChats, { message }]);
+			setMessages((oldChats) => [{ message }, ...oldChats]);
 		});
 
 		return () => disconnectSocket();

@@ -1,30 +1,30 @@
-import io from "socket.io-client";
+import io from 'socket.io-client';
 
 let socket;
 
 export const initSocket = () => {
-	socket = io("https://kodluyoruz.rocknjs.com/", {
-		transports: ["websocket"],
+	socket = io('https://kodluyoruz.rocknjs.com/', {
+		transports: ['websocket'],
 	});
 
-	console.log("Connecting...");
-	socket.on("connect", () => console.log("Connected!"));
+	console.log('Connecting...');
+	socket.on('connect', () => console.log('Connected!'));
 };
 
 export const disconnectSocket = () => {
-	console.log("Disconnecting...");
+	console.log('Disconnecting...');
 	if (socket) socket.disconnect();
 };
 
 export const sendMessage = (message) => {
-	if (socket) socket.emit("new-message", message);
+	if (socket) socket.emit('new-message', message);
 };
 
 export const subscribeToChat = (cb) => {
 	if (!socket) return true;
 
-	socket.on("receive-message", (message) => {
-		console.log("message received: ", message);
+	socket.on('receive-message', (message) => {
+		console.log('message received: ', message);
 		cb(message);
 	});
 };
@@ -32,8 +32,8 @@ export const subscribeToChat = (cb) => {
 export const subscribeInitialMessages = (cb) => {
 	if (!socket) return true;
 
-	socket.on("message-list", (data) => {
-		console.log("message list received: ", data);
+	socket.on('message-list', (data) => {
+		console.log('message list received: ', data);
 		cb(data);
 	});
 };

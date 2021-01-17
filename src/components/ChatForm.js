@@ -1,20 +1,20 @@
-import { useState, useContext } from "react";
+import { useState, useContext } from 'react';
 
-import styles from "./style.module.css";
+import styles from './style.module.css';
 
-import ChatContext from "../contexts/ChatContext";
-import { sendMessage } from "../socketService";
+import ChatContext from '../contexts/ChatContext';
+import { sendMessage } from '../socketService';
 
 function ChatForm() {
-	const [message, setMessage] = useState("");
+	const [message, setMessage] = useState('');
 
 	const { messages, setMessages } = useContext(ChatContext);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		sendMessage(message);
-		setMessages([...messages, { message, fromMe: true }]);
-		setMessage("");
+		setMessages([{ message, fromMe: true }, ...messages]);
+		setMessage('');
 	};
 
 	return (
